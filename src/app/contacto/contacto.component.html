@@ -1,0 +1,15 @@
+<div align="center" class="letrasSize">
+  <mat-form-field appearance="legacy">
+    <mat-label>Mail</mat-label>
+    <input matInput placeholder="fredweasley@hogwarts.com" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <br>
+ <mat-form-field>
+  <mat-label>Mensaje</mat-label>
+   <textarea matInput></textarea>
+ </mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" class="icono">Enviar</button>
+  <button mat-raised-button color="primary" class="icono">Borrar</button>
+</div>

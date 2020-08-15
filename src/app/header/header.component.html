@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">
+  <button mat-button><a href="/" class="h1 letras">MikiM</a></button>
+  <div class="derecha letras">
+    <button mat-button><a href="/registro">Registrarse</a></button>
+    <button mat-button><a href="/login">Iniciar sesión</a></button>
+    <button mat-button [matMenuTriggerFor]="productos"><a href="/productos">Productos</a></button>
+    <mat-menu #productos="matMenu" yPosition="above">
+      <button mat-menu-item><a href="/productos/tarjeteria">Tarjetería</a></button>
+      <button mat-menu-item><a href="/productos/souvenires">Souvenires</a></button>
+      <button mat-menu-item><a href="/productos/otros">Otros</a></button>
+    </mat-menu>
+    <button mat-button><a href="/contacto">Contacto</a></button>
+  </div>
+</mat-toolbar>
+

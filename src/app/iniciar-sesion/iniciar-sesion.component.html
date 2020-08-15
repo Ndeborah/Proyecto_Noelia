@@ -1,0 +1,18 @@
+<br>
+<div align="center" class="letrasSize">
+<mat-form-field appearance="legacy">
+  <mat-label>Mail de usuario</mat-label>
+  <input matInput placeholder="fredweasley@hogwarts.com" [formControl]="email" required>
+  <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+</mat-form-field>
+<br>
+<mat-form-field appearance="legacy">
+  <mat-label>Contraseña</mat-label>
+  <input matInput [type]="hide ? 'password' : 'text'">
+  <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+    <mat-icon color="primary">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+  </button>
+</mat-form-field>
+  <br>
+  <button mat-raised-button color="primary" class="icono">Entrar</button>
+</div>
